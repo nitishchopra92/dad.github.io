@@ -4,9 +4,9 @@
 
 :root {
   --font-poppins: "Poppins", sans-serif;
-  --primary-color: #f17e01;
-  --secondary-color: #b5ce2c;
-  --black-color: #212121;
+  --primary-color: #0553d2;
+  --secondary-color: #1dabfd;
+  --black-color: #151716;
   --white-color: #ffffff;
   --light-bg: rgba(210, 217, 223,0.4);
 }
@@ -104,7 +104,7 @@ a {
 }
 
 .btn {
-  background: var(--secondary-color);
+  background: var(--primary-color);
   padding: 1rem 1.5rem;
   font-size: 1.25rem;
   font-weight: 600;
@@ -249,9 +249,6 @@ header .closeicon img {
   margin: 0 auto 1rem;
   letter-spacing: 1px;
 }
-.banner h1 span {
-  color: var(--primary-color);
-}
 .banner p {
   font-size: 1.125rem;
   font-weight: 500;
@@ -364,11 +361,8 @@ header .closeicon img {
   padding: 2.5rem 1.5rem;
   border-radius: 0.5rem;
   overflow: hidden;
-  background: var(--primary-color);
+  background: #565555;
   min-height: 20rem;
-}
-.events-section .item:nth-child(even) {
-  background: var(--secondary-color);
 }
 .events-section .item p {
   margin-bottom: 0;
@@ -453,7 +447,7 @@ header .closeicon img {
   font-family: var(--font-poppins) !important;
 }
 .contact-us button {
-  background: var(--secondary-color);
+  background: var(--primary-color);
   border: 0;
   padding: 20px 30px;
   font-size: 18px;
@@ -479,7 +473,7 @@ header .closeicon img {
 
 footer {
   padding: 40px 0px;
-  background: var(--primary-color);
+  background: var(--black-color);
 }
 footer .inner-wrapper {
   display: flex;
@@ -518,7 +512,7 @@ footer li .icon-wrapper {
   width: 60px;
   height: 60px;
   min-width: 60px;
-  background: var(--secondary-color);
+  background: var(--white-color);
   border-radius: 8px;
   display: flex;
   justify-content: center;
@@ -526,6 +520,7 @@ footer li .icon-wrapper {
   text-align: left;
 }
 footer li .icon-wrapper img {
+  filter: brightness(0);
   max-height: 30px;
 }
 footer span,
@@ -753,7 +748,7 @@ footer .copyright {
     background: var(--primary-color);
   }
   .value-section .item:nth-child(4) {
-    background: var(--secondary-color);
+    background: var(--primary-color);
   }
   .faq-section .heading-wrapper {
     text-align: left;

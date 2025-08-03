@@ -4,11 +4,11 @@
 
 :root {
     --font-poppins: "Poppins", sans-serif;;
-    // --primary-color: #013BBE;
-    --primary-color: #f17e01;
-    // --secondary-color: #33a1e0;
-    --secondary-color: #b5ce2c;
-    --black-color: #212121;
+    --primary-color: #0553d2;
+    // --primary-color: #f17e01;
+    --secondary-color: #1dabfd;
+    // --primary-color: #b5ce2c;
+    --black-color: #151716;
     --white-color: #ffffff;
     --light-bg: rgba(210, 217, 223,0.4);
 }
@@ -103,7 +103,7 @@ a {
 }
 
 .btn {
-    background: var(--secondary-color);
+    background: var(--primary-color);
     padding: 1rem 1.5rem;
     font-size: 1.25rem;
     font-weight: 600;
@@ -292,9 +292,9 @@ header {
         margin: 0 auto 1rem;
         letter-spacing: 1px;
 
-        span {
-            color: var(--primary-color);
-        }
+        // span {
+        //     color: var(--primary-color);
+        // }
     }
 
     p {
@@ -425,12 +425,13 @@ header {
         padding: 2.5rem 1.5rem;
         border-radius: 0.5rem;
         overflow: hidden;
-        background: var(--primary-color);
+        // background: var(--black-color);
+        background: #565555;
         min-height: 20rem;
 
-        &:nth-child(even) {
-            background: var(--secondary-color);
-        }
+        // &:nth-child(even) {
+        //     background: var(--primary-color);
+        // }
 
         p {
             margin-bottom: 0;
@@ -528,7 +529,7 @@ header {
     }
 
     button {
-        background: var(--secondary-color);
+        background: var(--primary-color);
         border: 0;
         padding: 20px 30px;
         font-size: 18px;
@@ -559,7 +560,7 @@ header {
 
 footer {
     padding: 40px 0px;
-    background: var(--primary-color);
+    background: var(--black-color);
     .inner-wrapper {
         display: flex;
         flex-direction: column;
@@ -599,13 +600,14 @@ footer {
             width: 60px;
             height: 60px;
             min-width: 60px;
-            background: var(--secondary-color);
+            background: var(--white-color);
             border-radius: 8px;
             display: flex;
             justify-content: center;
             align-items: center;
             text-align: left;
             img {
+                filter: brightness(0);
                 max-height: 30px;
             }
         }
@@ -891,7 +893,7 @@ footer {
             }
 
             &:nth-child(4) {
-                background: var(--secondary-color);
+                background: var(--primary-color);
             }
         }
     }   
