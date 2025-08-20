@@ -4,6 +4,7 @@
 
 :root {
   --font-poppins: "Poppins", sans-serif;
+  --font-lora: "Lora", serif;
   --primary-color: #0553d2;
   --secondary-color: #1dabfd;
   --black-color: #151716;
@@ -28,7 +29,7 @@ html {
 }
 
 body {
-  font-family: var(--font-poppins);
+  font-family: var(--font-lora);
   background-color: var(--white-color);
   color: var(--black-color);
   font-size: 0.875rem;
@@ -41,13 +42,15 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   margin: 0;
+  font-family: var(--font-poppins);
 }
 
 p {
   margin: 0 0 0.625rem;
-  font-size: 1rem;
-  line-height: 1.85;
+  font-size: 1.25rem;
+  line-height: 1.65;
   opacity: 0.85;
+  letter-spacing: 0.5px;
 }
 
 img {
@@ -109,13 +112,14 @@ a {
   font-size: 1.25rem;
   font-weight: 600;
   color: var(--white-color);
+  font-family: var(--font-poppins);
   border-radius: 0.5rem;
   cursor: pointer;
   display: inline-flex;
 }
 
 header {
-  padding: 0.5rem 0;
+  padding: 0.75rem 0;
   transition: all 0.25s ease-in-out;
   background: var(--white-color);
 }
@@ -131,7 +135,7 @@ header .logo {
   display: flex;
 }
 header .logo img {
-  max-height: 4.25rem;
+  max-height: 5rem;
 }
 header .inner-wrapper {
   justify-content: space-between;
@@ -149,6 +153,7 @@ header a,
 header span {
   color: var(--primary-color);
   text-decoration: none;
+  font-family: var(--font-poppins);
   font-weight: 500;
   padding: 0;
   background: transparent;
@@ -188,26 +193,27 @@ header .closeicon img {
 }
 
 .title {
-  font-size: 38px;
+  font-size: 2.125rem;
   font-weight: 700;
-  margin-bottom: 24px;
+  margin-bottom: 1.5rem;
   line-height: 1.25;
   letter-spacing: 0.25px;
   color: var(--primary-color);
 }
 
 .heading-wrapper {
-  margin-bottom: 32px;
-  max-width: 680px;
+  margin-bottom: 2rem;
+  max-width: 48rem;
   margin-left: auto;
   margin-right: auto;
 }
 .heading-wrapper .title {
+  font-family: var(--font-poppins);
   margin-bottom: 10px;
 }
 
 .banner .inner-wrapper {
-  min-height: calc(100vh - 6rem);
+  min-height: calc(80vh - 8rem);
   position: relative;
 }
 .banner .banner-bg {
@@ -222,7 +228,7 @@ header .closeicon img {
      object-position: center;
 }
 .banner .content-box {
-  background: rgba(0, 0, 0, 0.55);
+  background: rgba(0, 0, 0, 0.7);
   width: 100%;
   height: 100%;
   display: flex;
@@ -232,7 +238,7 @@ header .closeicon img {
   padding: 4rem 2rem;
   text-align: center;
   position: relative;
-  min-height: calc(100vh - 6rem);
+  min-height: calc(80vh - 8rem);
 }
 .banner .content {
   width: 50rem;
@@ -240,17 +246,17 @@ header .closeicon img {
   color: var(--white-color);
 }
 .banner h1 {
-  font-size: 2.25rem;
+  font-size: 2.125rem;
   margin-top: 0;
   line-height: 1.35;
   width: 90%;
-  font-weight: 800;
+  font-weight: 700;
   margin: 0 auto 1rem;
   letter-spacing: 1px;
   margin-bottom: 0;
 }
 .banner p {
-  font-size: 1.125rem;
+  font-size: 1.375rem;
   font-weight: 500;
   margin-top: 1rem;
 }
@@ -364,18 +370,19 @@ header .closeicon img {
 .services-section .item {
   flex: 1 1 24%;
 }
+.services-section .item p {
+  font-size: 1rem;
+  margin-bottom: 0;
+}
 .services-section .border-box {
   margin-bottom: 20px;
 }
 .services-section .name {
-  font-size: 16px;
+  font-size: 1rem;
+  font-family: var(--font-poppins);
   font-weight: 700;
   margin-bottom: 8px;
   color: var(--primary-color);
-}
-.services-section p {
-  font-size: 14px;
-  margin-bottom: 0;
 }
 
 .values-section .items {
@@ -416,26 +423,28 @@ header .closeicon img {
   font-size: 14px;
 }
 
-.events-section .inner-wrapper {
+.impact .inner-wrapper {
   -moz-column-gap: 4%;
        column-gap: 4%;
   align-items: center;
 }
-.events-section .heading-wrapper {
+.impact .heading-wrapper {
   width: 30%;
   margin-bottom: 0;
 }
-.events-section .heading-wrapper p {
+.impact .heading-wrapper p {
   margin-bottom: 0;
+  font-size: 1.25rem;
+  line-height: 1.5;
 }
-.events-section .items {
+.impact .items {
   width: 76%;
   -moz-column-gap: 2%;
        column-gap: 2%;
   row-gap: 1.5rem;
   flex-wrap: wrap;
 }
-.events-section .item {
+.impact .item {
   flex: 1 1 32%;
   display: flex;
   flex-direction: column;
@@ -449,12 +458,12 @@ header .closeicon img {
   background: #566885;
   min-height: 20rem;
 }
-.events-section .item p {
+.impact .item p {
   margin-bottom: 0;
-  font-size: 0.875rem;
+  font-size: 1.125rem;
   color: var(--white-color);
 }
-.events-section .icon-wrapper {
+.impact .icon-wrapper {
   width: 5rem;
   height: 5rem;
   background: var(--white-color);
@@ -464,49 +473,75 @@ header .closeicon img {
   align-items: center;
   margin-bottom: 1rem;
 }
-.events-section .icon-wrapper img {
+.impact .icon-wrapper img {
   max-height: 2.75rem;
+  filter: brightness(0);
 }
-.events-section .name {
-  font-size: 1rem;
+.impact .name {
+  font-size: 2.25rem;
+  letter-spacing: 1px;
   font-weight: 700;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0;
   color: var(--white-color);
   text-transform: capitalize;
+  font-family: var(--font-poppins);
 }
 
 .faq-section .items {
   -moz-column-gap: 2%;
        column-gap: 2%;
-  row-gap: 16px;
+  row-gap: 1rem;
 }
 .faq-section .item {
-  padding: 34px 24px;
-  border-radius: 8px;
+  padding: 2rem 1.5rem;
+  border-radius: 0.5rem;
   overflow: hidden;
   background: var(--light-bg);
 }
+.faq-section .item p {
+  font-size: 1.125rem;
+  margin-bottom: 2rem;
+}
 .faq-section .stars {
-  -moz-column-gap: 4px;
-       column-gap: 4px;
-  margin-bottom: 16px;
+  -moz-column-gap: 0.25rem;
+       column-gap: 0.25rem;
+  margin-bottom: 2rem;
 }
 .faq-section .stars img {
-  max-height: 14px;
-}
-.faq-section p {
-  font-size: 14px;
-  margin-bottom: 16px;
+  max-height: 0.875rem;
 }
 .faq-section .name {
-  font-size: 16px;
+  font-size: 1.125rem;
   font-weight: 700;
   color: var(--primary-color);
-  margin-bottom: 4px;
+  margin-bottom: 0.25rem;
+  font-family: var(--font-poppins);
 }
 .faq-section .date {
-  opacity: 0.65;
-  font-size: 12px;
+  opacity: 0.85;
+  font-size: 0.875rem;
+}
+
+.gallery .items {
+  flex-wrap: wrap;
+  gap: 1rem 1%;
+}
+.gallery .item {
+  width: 24.25%;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+.gallery .item img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+.gallery .btn-wrapper {
+  justify-content: center;
+  margin-top: 3rem;
 }
 
 .contact-us .form-wrapper {
