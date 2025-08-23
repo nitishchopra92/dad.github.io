@@ -538,6 +538,7 @@ header .closeicon img {
   row-gap: 1rem;
 }
 .faq-section .item {
+  width: 32%;
   padding: 2rem 1.5rem;
   border-radius: 0.5rem;
   overflow: hidden;
@@ -872,6 +873,7 @@ footer .copyright {
   font-size: 1.125rem;
   font-weight: 700;
   color: var(--primary-color);
+  font-family: var(--font-poppins);
 }
 .vission-mission p {
   margin-bottom: 0;
@@ -945,27 +947,98 @@ footer .copyright {
 }
 .milestone .item:nth-child(even) .content {
   align-items: flex-end;
-}
-.milestone .item:nth-child(even) p {
   text-align: right;
+}
+.milestone .item:nth-child(even) .icon-box {
+  order: 2;
+}
+.milestone .item:nth-child(even) .text {
+  order: 1;
 }
 .milestone .content {
   width: 46%;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   position: relative;
   gap: 0.5rem;
-  padding: 2rem;
+  padding: 0rem;
   border-radius: 0.5rem;
   background: var(--light-bg);
+  overflow: hidden;
 }
 .milestone .num {
   display: inline-flex;
   justify-content: flex-start;
   align-items: center;
   font-size: 1.75rem;
+  line-height: 1;
   font-weight: 800;
   color: var(--primary-color);
+}
+.milestone .icon {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+  width: 90%;
+}
+.milestone .icon-box {
+  min-height: 100%;
+  width: 8rem;
+  min-width: 8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #dddddd;
+}
+.milestone .icon-box img {
+  filter: brightness(1) invert(1);
+  opacity: 0.8;
+  max-width: 4rem;
+  max-height: 4rem;
+}
+.milestone .text {
+  padding: 2rem;
+}
+.milestone p {
+  margin-top: 0.5rem;
+  font-size: 1rem;
+}
+
+.team .items {
+  -moz-column-gap: 2%;
+       column-gap: 2%;
+  flex-wrap: wrap;
+}
+.team .item {
+  width: 23.5%;
+  overflow: hidden;
+  border-radius: 0.5rem;
+}
+.team .img-wrapper {
+  aspect-ratio: 1/1.125;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: top center;
+     object-position: top center;
+  overflow: hidden;
+  display: flex;
+}
+.team .content {
+  padding: 0.625rem 0.625rem 0 0;
+}
+.team .name {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--primary-color);
+  font-family: var(--font-poppins);
+}
+.team .desc {
+  font-size: 1rem;
+}
+.team .btn-wrapper {
+  justify-content: center;
+  margin-top: 3rem;
 }
 
 @media only screen and (max-width: 1199.5px) {
