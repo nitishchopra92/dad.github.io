@@ -116,7 +116,7 @@ a {
   cursor: pointer;
   justify-content: center;
   align-items: center;
-  min-width: 12rem;
+  min-width: 16rem;
   padding: 1.375rem 1.5rem;
   font-size: 1.25rem;
   font-weight: 600;
@@ -303,7 +303,10 @@ header .closeicon img {
   margin-top: 1rem;
 }
 .banner .btn-wrapper {
-  margin-top: 2rem;
+  margin-top: 3rem;
+}
+.banner .btn {
+  min-width: 12rem;
 }
 .banner .mobile {
   display: none;
@@ -674,7 +677,7 @@ header .closeicon img {
 .get-involved .item:hover .content {
   padding-bottom: 3.5rem;
 }
-.get-involved .item:hover .btn {
+.get-involved .item:hover .btn-sm {
   opacity: 1;
   visibility: visible;
   bottom: 0;
@@ -707,8 +710,9 @@ header .closeicon img {
   align-items: center;
   justify-content: center;
 }
-.get-involved .btn {
+.get-involved .btn-sm {
   position: absolute;
+  font-family: var(--font-poppins);
   font-size: 0.875rem;
   padding: 0.5rem 1rem;
   border-radius: 0.5rem;
