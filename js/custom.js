@@ -5,18 +5,18 @@ document.addEventListener('DOMContentLoaded', () => {
     const closeicon = document.querySelector('.closeicon');
     const nav = document.querySelector('nav');
     const navItems = nav.querySelectorAll('a');
-    toggleicon.addEventListener('click', function(event) {
+    toggleicon.addEventListener('click', function (event) {
         nav.classList.add('active');
     });
-    closeicon.addEventListener('click', function(event) {
+    closeicon.addEventListener('click', function (event) {
         nav.classList.remove('active');
     });
     navItems.forEach(item => {
-        item.addEventListener('click', function(event) {
+        item.addEventListener('click', function (event) {
             event.preventDefault();
             const targetId = item.getAttribute('href').substring(1);
             const targetElement = document.getElementById(targetId);
-            
+
             if (targetElement) {
                 nav.classList.remove('active');
                 const offsetTop = targetElement.getBoundingClientRect().top + window.scrollY - 76;
@@ -28,12 +28,31 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
-    window.addEventListener('scroll', function() {
+    window.addEventListener('scroll', function () {
         const header = document.querySelector('header');
         if (window.scrollY >= 20) {
             header.classList.add('active');
         } else {
             header.classList.remove('active');
         }
+    });
+
+    document.querySelectorAll(".a-title").forEach(title => {
+        title.addEventListener("click", () => {
+            const content = title.nextElementSibling;
+            const openContent = document.querySelector(".a-content.open");
+            const activeTitle = document.querySelector(".a-title.active");
+
+            if (openContent && openContent !== content) {
+                openContent.classList.remove("open");
+            }
+            if (activeTitle && activeTitle !== title) {
+                activeTitle.classList.remove("active");
+            }
+
+            // Always open the clicked one (no toggle close)
+            content.classList.add("open");
+            title.classList.add("active");
+        });
     });
 })
