@@ -332,15 +332,16 @@ header .closeicon img {
   align-items: center;
   border-radius: 0 0 0.5rem 0.5rem;
   background: var(--light-bg);
-  margin-top: -0.5rem;
+  margin-top: -0.75rem;
 }
 .breadcrumb li {
   position: relative;
   padding-right: 1.5rem;
   margin-right: 1.5rem;
-  font-size: 1rem;
+  font-size: 0.875rem;
   font-weight: 600;
-  color: rgba(0, 0, 0, 0.65);
+  color: rgba(0, 0, 0, 0.75);
+  font-family: var(--font-poppins);
 }
 .breadcrumb li::after {
   content: "";
@@ -360,6 +361,9 @@ header .closeicon img {
 }
 .breadcrumb li:last-child::after {
   display: none;
+}
+.breadcrumb a {
+  color: var(--primary-color);
 }
 
 .about-section .inner-wrapper {
