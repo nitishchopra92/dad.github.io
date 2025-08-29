@@ -57,10 +57,12 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
 
-    $('#patrons').owlCarousel({
+    $('.team-slider').owlCarousel({
         loop:true,
         margin:20,
-        nav:true,
+        nav:false,
+        dots:true,
+        responsive: true,
         responsive:{
             0:{
                 items:1
@@ -73,12 +75,13 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
     });
-    $('#presidents').owlCarousel({
-        loop:true,
+
+    $('.report-slider').owlCarousel({
+        loop:false,
         margin:20,
-        nav:true,
+        nav:false,
         dots: true,
-        responsivetrue,
+        responsive: true,
         responsive:{
             0:{
                 items:1
@@ -88,6 +91,9 @@ document.addEventListener('DOMContentLoaded', () => {
             },
             1000:{
                 items:4
+            },
+            1200:{
+                items:5
             }
         }
     });
