@@ -55,4 +55,40 @@ document.addEventListener('DOMContentLoaded', () => {
             title.classList.add("active");
         });
     });
+
+
+    $('#patrons').owlCarousel({
+        loop:true,
+        margin:20,
+        nav:true,
+        responsive:{
+            0:{
+                items:1
+            },
+            600:{
+                items:3
+            },
+            1000:{
+                items:4
+            }
+        }
+    });
+    $('#presidents').owlCarousel({
+        loop:true,
+        margin:20,
+        nav:true,
+        dots: true,
+        responsivetrue,
+        responsive:{
+            0:{
+                items:1
+            },
+            600:{
+                items:3
+            },
+            1000:{
+                items:4
+            }
+        }
+    });
 })
