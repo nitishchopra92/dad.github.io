@@ -97,4 +97,25 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
     });
+    $('.events-slider').owlCarousel({
+        loop:false,
+        margin:20,
+        nav:true,
+        dots: true,
+        responsive: true,
+        responsive:{
+            0:{
+                items:1
+            },
+            600:{
+                items:3
+            },
+            1000:{
+                items:4
+            },
+            1200:{
+                items:4
+            }
+        }
+    });
 })
