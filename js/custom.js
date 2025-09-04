@@ -12,22 +12,31 @@ document.addEventListener('DOMContentLoaded', () => {
         nav.classList.remove('active');
     });
     navItems.forEach(item => {
-        item.addEventListener('click', function (event) {
-            event.preventDefault();
-            const targetId = item.getAttribute('href').substring(1);
-            const targetElement = document.getElementById(targetId);
+  item.addEventListener('click', function (event) {
+    const href = item.getAttribute('href');
 
-            if (targetElement) {
-                nav.classList.remove('active');
-                const offsetTop = targetElement.getBoundingClientRect().top + window.scrollY - 76;
+    // Only intercept if it's an in-page anchor link
+    if (href.startsWith('#')) {
+      event.preventDefault();
+      const targetId = href.substring(1);
+      const targetElement = document.getElementById(targetId);
 
-                window.scrollTo({
-                    top: offsetTop,
-                    behavior: 'smooth'
-                });
-            }
+      if (targetElement) {
+        nav.classList.remove('active');
+        const offsetTop = targetElement.getBoundingClientRect().top + window.scrollY - 76;
+
+        window.scrollTo({
+          top: offsetTop,
+          behavior: 'smooth'
         });
-    });
+      }
+    } else {
+      // External link or normal page navigation
+      nav.classList.remove('active');
+    }
+  });
+});
+
     window.addEventListener('scroll', function () {
         const header = document.querySelector('header');
         if (window.scrollY >= 20) {
